@@ -2,20 +2,20 @@
 
 A fully functional, responsive e‑commerce web application built with React. This app lets users browse products, add/remove items from the cart, update quantities, view a dynamic subtotal, and simulate a checkout flow using React Context for state management.
 
-## 🖥️ Demo 
+## Demo 
 
 🔗 **Live Demo:** https://e-commerce-website-eta-pink.vercel.app/
 
-## 🚀 Features
+## Features
 
-- 🛍️ Add/remove products from cart
-- 📦 Product detail view with pricing & images
-- 🧾 Shopping cart with quantity updates and subtotal calculations
-- 💳 Simulated checkout page
-- 📱 Fully responsive (mobile, tablet, desktop)
-- 🧠 Clean, modular component structure
-- 
-## 🛠️ Tech Stack
+- Add/remove products from cart
+- Product detail view with pricing & images
+- Shopping cart with quantity updates and subtotal calculations
+- Simulated checkout page
+- Fully responsive (mobile, tablet, desktop)
+- Clean, modular component structure
+  
+## Tech Stack
 
 - **Frontend:**
      - React (functional components)
