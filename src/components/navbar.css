@@ -1,38 +1,95 @@
-.navbar {
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(90deg, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.8));
+:root {
+  --red: #ef4444;
+  --red-dark: #dc2626;
+  --nav-bg: rgba(15, 23, 42, 0.96);
+  --nav-border: rgba(148, 163, 184, 0.4);
+  --nav-link: #e5e7eb;
+  --nav-link-muted: #9ca3af;
+}
+
+.Nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+          to bottom,
+          rgba(15, 23, 42, 0.96),
+          rgba(15, 23, 42, 0.9)
+  );
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.Nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 20px;
   display: flex;
-  flex-direction: row-reverse;
-  gap: 50px;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
 }
 
-.links {
-  margin-right: 50px;
+.Nav-brand h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f9fafb;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.Nav-links {
   display: flex;
-  gap: 30px;
   align-items: center;
+  gap: 18px;
 }
 
-.links a {
-  font-family: "Times New Roman", Times, serif;
+.Nav-links a {
+  color: var(--nav-link-muted);
   text-decoration: none;
-  color: white;
-  margin-left: 20px;
-  font-size: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.18s ease;
 }
 
-.links a:hover {
-  color: #FF7676;
-  text-decoration: underline;
+.Nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--red), var(--red-dark));
+  transition: width 0.18s ease;
 }
 
-.logo {
-  margin-left: 50px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 25px;
-  color: white;
-  font-weight: bold;
+.Nav-links a:hover {
+  color: var(--nav-link);
+}
+
+.Nav-links a:hover::after {
+  width: 100%;
+}
+
+.Nav-cart-link span {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .Nav-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .Nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

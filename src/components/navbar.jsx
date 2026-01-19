@@ -1,20 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
-import './navbar.css'
+import "./navbar.css";
 
 export const Navbar = () => {
     return (
-        <div className="navbar">
-           <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/cart"><ShoppingCart size={16}/>Cart</Link>
-                <Link to="/products">Products</Link>
-                <Link to="/about">About</Link>
+        <header className="Nav">
+            <div className="Nav-inner">
+                <div className="Nav-brand">
+                    <h1>SHOPTECH &#39;91</h1>
+                </div>
+
+                <nav className="Nav-links">
+                    <Link to="/">Home</Link>
+                    <Link to="/products">Products</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/cart" className="Nav-cart-link">
+                        <ShoppingCart size={18} />
+                        <span>Cart</span>
+                    </Link>
+                </nav>
             </div>
-            <div className="logo">
-                <h1>My E-commerce Store</h1>
-           </div>
-        </div>
-    )
-}
+        </header>
+    );
+};
