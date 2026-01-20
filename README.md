@@ -48,7 +48,7 @@ A fully functional, responsive e‑commerce web application built with React. Th
 1. Clone the repository:
    ```bash
    git clone https://github.com/Stephani-e/E-Commerce.Website.git
-   cd Quiz-App
+   cd E-Commerce.Website
 2. Install Dependencies:
    ```bash
    npm install
