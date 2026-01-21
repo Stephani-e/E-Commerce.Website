@@ -54,4 +54,4 @@ A fully functional, responsive e‑commerce web application built with React. Th
    npm install
 3. Start the development server
    ```bash
-   npm start
+   npm run dev
